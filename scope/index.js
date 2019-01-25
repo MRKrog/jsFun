@@ -12,7 +12,7 @@ const scope = {
 
       function beautifyPerson() {
         // Log A: personB
-        
+
         if (personB.includes('B')) {
           personB = person;
           personC = personB;
@@ -29,7 +29,7 @@ const scope = {
 
     // Log D: personC
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = [{ 'A':'Ben'}, { 'B':'CardiB'}, { 'C':'CardiB'}, { 'D':'Paul'}];
     return result;
 
     // Annotation:
@@ -63,7 +63,7 @@ const scope = {
 
     // Log D: number
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = [{ 'A': 75}, { 'B': 64}, { 'C': 64}, { 'D': 30}];
     return result;
 
     // Annotation:
@@ -97,7 +97,7 @@ const scope = {
 
     // Log D: greeting
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = [{ 'A': 'Yo'}, { 'B': 'Hey'}, { 'C': 'Hey'}, { 'D': 'Hello'}];
     return result;
 
     // Annotation:
@@ -114,24 +114,24 @@ const scope = {
         let greeting = 'hello';
       }
 
-      // Log A: greeting
+      // Log A: greeting // hi
 
       const newGreeting = ()  => {
         greeting = 'welcome';
 
-        // Log B: greeting
+        // Log B: greeting // welcome
       };
 
       newGreeting();
 
-      // Log C: greeting
+      // Log C: greeting // welcome
     };
 
     greetingGenerator();
 
     // Log D: greeting
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = [{ 'A': 'hi'}, { 'B': 'welcome'}, { 'C': 'welcome'}, { 'D': 'howdy'}];
     return result;
 
     // Annotation:
@@ -151,10 +151,10 @@ const scope = {
           let name = 'Brittany';
         }
 
-        // Log A: name
+        // Log A: name // Nathaniel
       }
 
-      // Log B: name
+      // Log B: name // Nathaniel
     }
 
     // Log C: name
@@ -163,7 +163,7 @@ const scope = {
 
     // Log D: name
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = [{ 'C': 'Brittany'}, { 'A': 'Nathaniel'}, { 'B': 'Nathaniel'}, { 'D': 'Brittany'}];
     return result;
 
     // Annotation:
@@ -174,31 +174,31 @@ const scope = {
     var dog = 'Spot';
 
     function petDog() {
-      // Log A: dog
+      // Log A: dog // Spot
 
       if (dog === 'Spot') {
         let dog = 'Fluffy';
       }
 
       function rollOver() {
-        // Log B: dog
+        // Log B: dog // Spot
 
         dog = 'Biscuit';
 
-        // Log C: dog
+        // Log C: dog // Biscuit
 
       }
 
       rollOver();
 
-      // Log D: dog
+      // Log D: dog // Biscuit
     }
 
     petDog();
 
-    // Log E: dog
+    // Log E: dog // Biscuit
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = [{ 'A': 'Spot'}, { 'B': 'Spot'}, { 'C': 'Biscuit'}, { 'D': 'Biscuit'}, { 'E': 'Biscuit'}];
     return result;
 
     // Annotation:
@@ -214,21 +214,22 @@ const scope = {
         var fruit = 'mango';
 
         if (fruit) {
-          // Log A: fruit
+          console.log(fruit + ' test string');
+          // Log A: fruit // reference error ????
           const fruit = 'strawberry';
         }
 
-        // Log B: fruit
+        // Log B: fruit // mango
       }
 
-      // Log C: fruit
+      // Log C: fruit // apple
     }
 
     eatFruit();
 
-    // Log D: fruit
+    // Log D: fruit // apple
 
-    const result = 'REPLACE WITH YOUR RESULT HERE';
+    const result = [{ 'A': ''}, { 'B': 'mango'}, { 'C': 'apple'}, { 'D': 'apple'}];
     return result;
 
     // Annotation:
@@ -315,7 +316,7 @@ const scope = {
       // Log B: toppings
       var toppings = 'chipotle sauce';
 
-      if (toppings === 'chipotle sauce') { 
+      if (toppings === 'chipotle sauce') {
         sandwich = 'not a mediocre sandwich';
       }
 
@@ -518,7 +519,7 @@ const scope = {
       // Log A: kid
       wildKids.push(kid);
       // Log B: wildKids
-  
+
       let drawOnTheWall = () => {
         let myKid = 'Mandy';
         // Log C: myKid
@@ -556,7 +557,7 @@ const scope = {
       // Log B: myName
 
       let innerFunc = () => {
-        let myName = 'Tesla'; 
+        let myName = 'Tesla';
         // Log C: myName
       };
 
